@@ -216,6 +216,55 @@ export default function About() {
         </motion.div>
       </motion.section>
 
+
+
+
+      {/* Experience */}
+<motion.section 
+  className="mb-20" 
+  {...fadeIn} 
+  transition={{ delay: 0.5 as const }} 
+>
+  <motion.h2 className="section-title mb-10 text-center" {...fadeInUp}>
+    Experience
+  </motion.h2>
+  <motion.div 
+    className="max-w-3xl mx-auto space-y-6" 
+    variants={staggerContainer} 
+    initial="initial" 
+    animate="animate" 
+  >
+    {/* Internship */}
+    <motion.div 
+      className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md" 
+      variants={fadeInUp} 
+      {...cardHoverSmall} 
+    >
+      <h3 className="text-xl font-semibold mb-2"> 
+        Full Stack Developer Intern 
+      </h3>
+      <p className="text-primary mb-2"> 
+        AetherPro Healthcare Pvt. Ltd. • Remote • Jul 2025 – Aug 2025 
+      </p>
+      <ul className="list-disc list-inside text-secondary space-y-1">
+        <li>Developed and deployed a healthcare web platform with Next.js, React.js, Node.js, and Express.</li>
+        <li>Built REST APIs, authentication, and ICD/CPT code management modules.</li>
+        <li>Worked with GitHub, Vercel, and Postman for collaboration and deployment.</li>
+        <li>Collaborated with the project lead to deliver production-ready features.</li>
+      </ul>
+      <a 
+        href="https://drive.google.com/file/d/1RmAhngXdSS6Dr6hpAc6cWwfOcFAQ85lI/view?usp=sharing" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-blue-500 hover:underline mt-3 inline-block"
+      >
+        View Certificate
+      </a>
+    </motion.div>
+  </motion.div>
+</motion.section>
+
+
       {/* Education */}
       <motion.section {...fadeIn} transition={{ delay: 0.6 as const }}>
         <motion.h2 className="section-title mb-10 text-center" {...fadeInUp}>
