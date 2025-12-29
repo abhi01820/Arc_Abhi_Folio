@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <div className="container max-w-7xl mx-auto py-12">
       <motion.h1 
-        className="text-4xl font-bold mb-8 text-center"
+        className="text-4xl font-bold mb-8 text-center text-violet-900 dark:text-white"
         {...fadeInUp}
       >
         Contact Me
@@ -67,8 +67,8 @@ export default function Contact() {
           {...slideInLeft}
         >
           <motion.div {...fadeInUp}>
-            <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-            <p className="text-secondary">
+            <h2 className="text-2xl font-semibold mb-4 text-violet-800 dark:text-white">Get in Touch</h2>
+            <p className="text-violet-600 dark:text-gray-300">
               I&apos;m always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions.
             </p>
@@ -88,8 +88,8 @@ export default function Contact() {
             >
               <FaEnvelope className="h-6 w-6 text-primary" />
               <div>
-                <h3 className="font-semibold">Email</h3>
-                <a href="mailto:mekalaabhilash01820@gmail.com" className="text-secondary hover:text-primary">
+                <h3 className="font-semibold text-violet-800 dark:text-white">Email</h3>
+                <a href="mailto:mekalaabhilash01820@gmail.com" className="text-violet-600 dark:text-gray-300 hover:text-primary">
                   mekalaabhilash01820@gmail.com
                 </a>
               </div>
@@ -103,8 +103,8 @@ export default function Contact() {
             >
               <FaPhone className="h-6 w-6 text-primary" />
               <div>
-                <h3 className="font-semibold">Phone</h3>
-                <a href="tel:+917989430063" className="text-secondary hover:text-primary">
+                <h3 className="font-semibold text-violet-800 dark:text-white">Phone</h3>
+                <a href="tel:+917989430063" className="text-violet-600 dark:text-gray-300 hover:text-primary">
                   +91 7989430063
                 </a>
               </div>
@@ -118,8 +118,8 @@ export default function Contact() {
             >
               <FaMapMarkerAlt className="h-6 w-6 text-primary" />
               <div>
-                <h3 className="font-semibold">Location</h3>
-                <p className="text-secondary">kukatpaly,Medchal</p>
+                <h3 className="font-semibold text-violet-800 dark:text-white">Location</h3>
+                <p className="text-violet-600 dark:text-gray-300">kukatpaly,Medchal</p>
               </div>
             </motion.div>
           </motion.div>
@@ -138,7 +138,7 @@ export default function Contact() {
             animate="animate"
           >
             <motion.div variants={fadeInUp}>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
+              <label htmlFor="name" className="block text-sm font-medium mb-2 text-violet-800 dark:text-white">
                 Name
               </label>
               <input
@@ -153,7 +153,7 @@ export default function Contact() {
             </motion.div>
             
             <motion.div variants={fadeInUp}>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
+              <label htmlFor="email" className="block text-sm font-medium mb-2 text-violet-800 dark:text-white">
                 Email
               </label>
               <input
@@ -168,7 +168,7 @@ export default function Contact() {
             </motion.div>
             
             <motion.div variants={fadeInUp}>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
+              <label htmlFor="message" className="block text-sm font-medium mb-2 text-violet-800 dark:text-white">
                 Message
               </label>
               <textarea

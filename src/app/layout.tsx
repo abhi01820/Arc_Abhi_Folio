@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/Footer";
+import TwinklingStars from "./components/TwinklingStars";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white transition-colors dark:bg-gray-900 dark:text-white `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 transition-colors dark:from-black dark:via-gray-900 dark:to-purple-950 text-white relative overflow-x-hidden`}
       >
+        <TwinklingStars count={150} />
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen pt-24 ">{children}</main>
+          <main className="min-h-screen pt-24 relative z-10">{children}</main>
           <Footer/>
         </ThemeProvider>
       </body>

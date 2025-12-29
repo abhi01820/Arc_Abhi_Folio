@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1761495925311",
+    "name": "Kundarapu Archana",
+    "email": "kundarapuarchana36@gmail.com",
+    "company": "",
+    "purpose": "job-opportunity",
+    "status": "approved",
+    "requestedAt": "2025-10-26T16:25:25.311Z",
+    "respondedAt": "2025-10-26T18:00:00.000Z"
+  },
+  {
+    "id": "1761496047670",
+    "name": "pushpa",
+    "email": "johnabhi744@gmail.com",
+    "company": "",
+    "purpose": "freelance",
+    "status": "pending",
+    "requestedAt": "2025-10-26T16:27:27.670Z"
+  },
+  {
+    "id": "1761498021034",
+    "name": "k.Archana",
+    "email": "archana10280@gmail.com",
+    "company": "",
+    "purpose": "collaboration",
+    "status": "pending",
+    "requestedAt": "2025-10-26T17:00:21.034Z"
+  },
+  {
+    "id": "1761498416619",
+    "name": "K.ARCHANA",
+    "email": "pushpa12@gmail.com",
+    "company": "",
+    "purpose": "job-opportunity",
+    "status": "pending",
+    "requestedAt": "2025-10-26T17:06:56.619Z"
+  }
+]
