@@ -20,10 +20,7 @@ import {
   fadeInUp, 
   fadeInDown, 
   slideInLeft, 
-  slideInRight,
-  float3D,
-  particle3D,
-  morphing3D
+  slideInRight
 } from "@/utils/animations";
 
 // 3D Background Component with Comet Effect
@@ -79,12 +76,19 @@ function Hero3DBackground() {
 }
 
 // Download Form Modal Component
+type DownloadForm = {
+  name: string;
+  email: string;
+  company: string;
+  purpose: string;
+};
+
 const DownloadModal = ({ isOpen, onClose, onSubmit }: {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: DownloadForm) => void;
 }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<DownloadForm>({
     name: '',
     email: '',
     company: '',
@@ -161,7 +165,7 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
                 Request Resume Access
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Please provide your information to request access to my resume. You'll receive an email notification once approved.
+                Please provide your information to request access to my resume. You&apos;ll receive an email notification once approved.
               </p>
             </div>
 
@@ -267,7 +271,7 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
 const Hero = () => {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
 
-  const handleDownloadSubmit = (data: any) => {
+  const handleDownloadSubmit = (data: DownloadForm) => {
     console.log('Download request from:', data);
     // You can add additional tracking here if needed
   };
@@ -481,7 +485,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
             variants={fadeInDown}
           >
-            Hi, I'm <motion.span 
+            Hi, I&apos;m <motion.span 
               className="inline-block"
               whileHover={{ 
                 scale: 1.1, 

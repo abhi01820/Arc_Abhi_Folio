@@ -3,9 +3,10 @@
 import { projects } from '@/contents/project';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
+import type { Project } from '@/types';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -63,7 +64,7 @@ const modalVariants: Variants = {
 };
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section className="py-20 container max-w-7xl mx-auto px-4 relative">

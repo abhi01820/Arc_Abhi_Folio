@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';

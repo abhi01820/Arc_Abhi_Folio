@@ -1,14 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import {
-  FaCode,
-  FaPaintBrush,
-  FaServer,
-  FaDatabase,
-  FaToolbox,
-  FaBrain,
-} from "react-icons/fa";
 import { motion } from "framer-motion";
 import {
   fadeInUp,
@@ -16,7 +8,6 @@ import {
   fadeIn,
   staggerContainer,
   cardHover,
-  cardHoverSmall,
 } from "@/utils/animations";
 import Skills from "../components/Skills3D";
 
@@ -51,7 +42,7 @@ export default function About() {
         transition={{ delay: 0.4 as const }}
       >
         <motion.h2 className="section-title mb-10 text-center text-white" {...fadeInUp}>
-          What I've Been Doing
+          What I&apos;ve Been Doing
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
@@ -457,7 +448,7 @@ export default function About() {
                       <strong>Status:</strong> Currently Pursuing
                     </p>
                     <p className="text-violet-600 mt-3 italic">
-                      "Focusing on full-stack development, software engineering, and preparing for high-growth career roles."
+                      &quot;Focusing on full-stack development, software engineering, and preparing for high-growth career roles.&quot;
                     </p>
                   </div>
                 </motion.div>
@@ -511,7 +502,7 @@ export default function About() {
                       <strong>Grade:</strong> 97.4%
                     </p>
                     <p className="text-violet-600 mt-3 italic">
-                      "Mathematics, Physics & Chemistry with outstanding academic performance."
+                      &quot;Mathematics, Physics &amp; Chemistry with outstanding academic performance.&quot;
                     </p>
                   </div>
                 </motion.div>
@@ -565,7 +556,7 @@ export default function About() {
                       <strong>Grade:</strong> 10 CGPA
                     </p>
                     <p className="text-violet-600 mt-3 italic">
-                      "Foundation years with excellent academic performance and holistic development."
+                      &quot;Foundation years with excellent academic performance and holistic development.&quot;
                     </p>
                   </div>
                 </motion.div>

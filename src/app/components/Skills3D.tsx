@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { 
   stagger3D, 
   glowPulse,
@@ -66,12 +65,9 @@ import {
   FaNodeJs,
   FaPython,
   FaJs,
-  FaDatabase,
   FaGitAlt,
   FaHtml5,
-  FaCss3Alt,
-  FaBootstrap,
-  FaAws
+  FaCss3Alt
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -79,14 +75,13 @@ import {
   SiTailwindcss,
   SiMongodb,
   SiExpress,
-  SiPostgresql,
   SiRedux,
-  SiFramer
 } from "react-icons/si";
+import type { IconType } from "react-icons";
 
 interface Skill {
   name: string;
-  icon: React.ComponentType<any>;
+  icon: IconType;
   color: string;
   category: string;
   proficiency: number;

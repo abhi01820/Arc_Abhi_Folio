@@ -114,7 +114,7 @@ export async function POST(req: Request) {
   }
 }
 
-export async function GET(req: Request) {
+export async function GET() {
   // Get all requests (for admin interface)
   const requests = getRequests();
   return NextResponse.json({ requests });
