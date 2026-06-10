@@ -1,580 +1,226 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeInDown,
-  fadeIn,
-  staggerContainer,
-  cardHover,
-} from "@/utils/animations";
-import Skills from "../components/Skills3D";
 
 export default function About() {
   return (
-    <div className="container max-w-7xl mx-auto py-12 px-4">
+    <div className="container max-w-5xl mx-auto py-16 px-4">
       {/* Title */}
-      <motion.h1
-        className="text-4xl font-bold mb-12 text-center text-white"
-        {...fadeInDown}
-      >
+      <h1 className="text-4xl font-bold mb-8 text-center text-white">
         About Me
-      </motion.h1>
+      </h1>
 
       {/* Bio */}
-      <motion.section className="mb-16" {...fadeInUp}>
-        <p className="text-lg text-white max-w-3xl mx-auto text-center leading-relaxed">
-          I&apos;m a passionate Full Stack Developer with experience in building
+      <section className="mb-16">
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto text-center leading-relaxed">
+          I'm a passionate Full Stack Developer with experience in building
           real-time, modern web applications. I specialize in both frontend and
           backend development to deliver seamless, efficient, and user-focused
           digital products.
         </p>
-      </motion.section>
+      </section>
 
-      {/* Interactive Skills Section */}
-      <Skills />
+      {/* Skills Section */}
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
+          Technical Skills
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-white mb-4">Frontend</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>React.js & Next.js</li>
+              <li>TypeScript & JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>HTML5 & CSS3</li>
+            </ul>
+          </div>
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-white mb-4">Backend</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Node.js & Express</li>
+              <li>RESTful APIs</li>
+              <li>MongoDB & SQL</li>
+              <li>Authentication (JWT)</li>
+            </ul>
+          </div>
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-white mb-4">Tools & Others</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Git & GitHub</li>
+              <li>Postman</li>
+              <li>Vercel Deployment</li>
+              <li>C++ & System Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Journey */}
-      <motion.section
-        className="mb-20"
-        {...fadeIn}
-        transition={{ delay: 0.4 as const }}
-      >
-        <motion.h2 className="section-title mb-10 text-center text-white" {...fadeInUp}>
-          What I&apos;ve Been Doing
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
-          variants={staggerContainer}
-          initial="initial"
-          animate="animate"
-        >
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
+          What I've Been Doing
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
               title: "Real-time Full Stack Projects",
-              desc: `Built full-fledged applications like:
-              • AI Voice Medical Assistant
-              • AI Voice Interview Preparation
-              • E-Commerce Bookstore
-              • Real-time Chat App with Video Call`,
+              desc: "Built full-fledged applications like:\n• AI Voice Medical Assistant\n• AI Voice Interview Preparation\n• E-Commerce Bookstore\n• Real-time Chat App with Video Call",
             },
             {
               title: "Self-Learning & Growth",
-              desc: `Actively learning system design, DevOps, and scalable architecture. Continuously growing through projects and open-source.`,
+              desc: "Actively learning system design, DevOps, and scalable architecture. Continuously growing through projects and open-source.",
             },
             {
               title: "UI/UX Practice",
-              desc: `Focusing on clean, accessible interfaces with animations and responsiveness.`,
+              desc: "Focusing on clean, accessible interfaces and responsive designs.",
             },
             {
               title: "Career Building",
-              desc: `Mastering DSA in C++, building real-world projects, and improving communication.`,
+              desc: "Mastering DSA in C++, building real-world projects, and improving communication.",
             },
           ].map((item, idx) => (
-            <motion.div
+            <div
               key={idx}
-              className="bg-gray-900/30 backdrop-blur-xl p-6 rounded-lg shadow-lg border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300"
-              variants={fadeInUp}
-              {...cardHover}
+              className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-semibold mb-2 text-white">
                 {item.title}
               </h3>
-              <p className="text-violet-600 leading-relaxed">
-                {item.desc.split("\n").map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
+              <p className="text-gray-400 leading-relaxed whitespace-pre-line">
+                {item.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
-
-
-
-      {/* Enhanced Experience Section */}
-      <motion.section 
-        className="mb-20" 
-        {...fadeIn} 
-        transition={{ delay: 0.5 as const }} 
-      >
-        <motion.h2 className="section-title mb-12 text-center text-white" {...fadeInUp}>
+      {/* Professional Experience */}
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
           Professional Experience
-        </motion.h2>
-        <motion.div 
-          className="max-w-4xl mx-auto" 
-          variants={staggerContainer} 
-          initial="initial" 
-          animate="animate" 
-        >
-          {/* Enhanced Internship Card */}
-          <motion.div 
-            className="relative group bg-gray-900/30 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-gray-700/50 hover:border-purple-500/30 overflow-hidden transition-all duration-300" 
-            variants={fadeInUp} 
-            whileHover={{ 
-              scale: 1.02, 
-              y: -8,
-              transition: { duration: 0.3, type: "spring", stiffness: 300 }
-            }}
-          >
-            {/* Animated Background Gradient */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              animate={{
-                background: [
-                  "linear-gradient(45deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05), rgba(236, 72, 153, 0.05))",
-                  "linear-gradient(45deg, rgba(147, 51, 234, 0.05), rgba(236, 72, 153, 0.05), rgba(59, 130, 246, 0.05))",
-                  "linear-gradient(45deg, rgba(236, 72, 153, 0.05), rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05))"
-                ]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
+        </h2>
+        <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
+            <div className="flex-shrink-0 bg-white p-2 rounded-lg">
+              <Image
+                src="/logos/aetherpro_healthcare_private_limited_logo.jpeg"
+                alt="AetherPro Healthcare Logo"
+                width={80}
+                height={64}
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Full Stack Developer Intern
+              </h3>
+              <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
+                <span className="bg-gray-800 px-3 py-1 rounded-full text-blue-400">
+                  AetherPro Healthcare Pvt. Ltd.
+                </span>
+                <span className="bg-gray-800 px-3 py-1 rounded-full text-purple-400">
+                  Remote
+                </span>
+                <span className="bg-gray-800 px-3 py-1 rounded-full text-green-400">
+                  Jul 2025 – Aug 2025
+                </span>
+              </div>
+            </div>
+          </div>
 
-            {/* Floating Particles */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
-                  style={{
-                    left: `${20 + i * 15}%`,
-                    top: `${10 + i * 10}%`,
-                  }}
-                  animate={{
-                    y: [0, -20, 0],
-                    opacity: [0.3, 1, 0.3],
-                    scale: [0.5, 1.2, 0.5],
-                  }}
-                  transition={{
-                    duration: 3 + i,
-                    repeat: Infinity,
-                    delay: i * 0.5,
-                    ease: "easeInOut"
-                  }}
-                />
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold mb-4 text-white">Key Achievements</h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-400 list-disc list-inside">
+              <li>Built full-stack web platform with Next.js & React.js</li>
+              <li>Developed robust APIs with Node.js & Express</li>
+              <li>Implemented secure user authentication systems</li>
+              <li>Built ICD/CPT code management modules</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold mb-3 text-white">Technologies Used</h4>
+            <div className="flex flex-wrap gap-2">
+              {["Next.js", "React.js", "Node.js", "Express", "GitHub", "Vercel", "Postman"].map((tech, idx) => (
+                <span key={idx} className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300">
+                  {tech}
+                </span>
               ))}
             </div>
-
-            {/* Header with Logo */}
-            <div className="relative z-10 flex items-start gap-6 mb-6">
-              {/* Company Logo */}
-              <motion.div 
-                className="flex-shrink-0"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="w-20 h-16 rounded-xl overflow-hidden shadow-lg border-2 border-white/30 dark:border-gray-600/30 bg-white dark:bg-gray-800 flex items-center justify-center p-2">
-                  <Image
-                    src="/logos/aetherpro-logo.png"
-                    alt="AetherPro Healthcare Logo"
-                    width={80}
-                    height={64}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Job Info */}
-              <div className="flex-1">
-                <motion.h3 
-                  className="text-2xl font-bold mb-2 text-white"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  Full Stack Developer Intern
-                </motion.h3>
-                
-                <motion.div 
-                  className="flex flex-wrap items-center gap-4 mb-4"
-                  variants={fadeInUp}
-                >
-                  <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                    <span className="text-violet-700 font-medium text-sm">
-                      AetherPro Healthcare Pvt. Ltd.
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-violet-700 font-medium text-sm">
-                      Remote
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-violet-700 font-medium text-sm">
-                      Jul 2025 – Aug 2025
-                    </span>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Key Achievements */}
-            <motion.div 
-              className="relative z-10 mb-6"
-              variants={fadeInUp}
-            >
-              <h4 className="text-lg font-semibold mb-4 text-white flex items-center gap-2">
-                <span className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></span>
-                Key Achievements
-              </h4>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  {
-                    icon: "🚀",
-                    title: "Healthcare Platform",
-                    desc: "Built full-stack web platform with Next.js & React.js"
-                  },
-                  {
-                    icon: "🔧", 
-                    title: "REST APIs",
-                    desc: "Developed robust APIs with Node.js & Express"
-                  },
-                  {
-                    icon: "🔐",
-                    title: "Authentication",
-                    desc: "Implemented secure user authentication systems"
-                  },
-                  {
-                    icon: "📊",
-                    title: "Medical Codes",
-                    desc: "Built ICD/CPT code management modules"
-                  }
-                ].map((achievement, idx) => (
-                  <motion.div
-                    key={idx}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-gray-800/50 border border-gray-700/30"
-                    whileHover={{ 
-                      scale: 1.05, 
-                      backgroundColor: "rgba(139, 92, 246, 0.1)" 
-                    }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <span className="text-2xl">{achievement.icon}</span>
-                    <div>
-                      <h5 className="font-semibold text-white text-sm">
-                        {achievement.title}
-                      </h5>
-                      <p className="text-violet-600 text-xs">
-                        {achievement.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Tech Stack Used */}
-            <motion.div 
-              className="relative z-10 mb-6"
-              variants={fadeInUp}
-            >
-              <h4 className="text-lg font-semibold mb-3 text-white flex items-center gap-2">
-                <span className="w-1 h-6 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-                Technologies Used
-              </h4>
-              
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: "Next.js", color: "bg-black text-white" },
-                  { name: "React.js", color: "bg-blue-500 text-white" },
-                  { name: "Node.js", color: "bg-green-600 text-white" },
-                  { name: "Express", color: "bg-gray-700 text-white" },
-                  { name: "GitHub", color: "bg-gray-800 text-white" },
-                  { name: "Vercel", color: "bg-black text-white" },
-                  { name: "Postman", color: "bg-orange-500 text-white" }
-                ].map((tech, idx) => (
-                  <motion.span
-                    key={idx}
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color} shadow-sm`}
-                    whileHover={{ 
-                      scale: 1.1, 
-                      y: -2,
-                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)"
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {tech.name}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Enhanced Action Buttons */}
-            <motion.div 
-              className="relative z-10 flex flex-wrap gap-4"
-              variants={fadeInUp}
-            >
-              <motion.a
-                href="https://drive.google.com/file/d/1RmAhngXdSS6Dr6hpAc6cWwfOcFAQ85lI/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 group"
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -2,
-                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.4)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="text-lg">📜</span>
-                <span>View Certificate</span>
-                <motion.span
-                  className="opacity-0 group-hover:opacity-100 transition-opacity"
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
-                </motion.span>
-              </motion.a>
-
-              <motion.a
-                href="/certs/Aetherpro_LOR.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 group"
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -2,
-                  boxShadow: "0 10px 30px rgba(147, 51, 234, 0.4)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="text-lg">📝</span>
-                <span>Letter of Recommendation</span>
-                <motion.span
-                  className="opacity-0 group-hover:opacity-100 transition-opacity"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  ⭐
-                </motion.span>
-              </motion.a>
-            </motion.div>
-
-            {/* Corner Decoration */}
-            <motion.div
-              className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/10 via-purple-500/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              animate={{
-                rotate: [0, 360],
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            />
-          </motion.div>
-        </motion.div>
-      </motion.section>
-
-
-      {/* Education Timeline */}
-      <motion.section {...fadeIn} transition={{ delay: 0.6 as const }}>
-        <motion.h2 className="section-title mb-16 text-center text-white" {...fadeInUp}>
-          Education Timeline
-        </motion.h2>
-        <motion.div
-          className="max-w-4xl mx-auto relative"
-          variants={staggerContainer}
-          initial="initial"
-          animate="animate"
-        >
-          {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 transform md:-translate-x-1/2 rounded-full shadow-lg">
-            {/* Glowing effect */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 rounded-full blur-sm opacity-50"></div>
           </div>
 
-          {/* Education Items */}
-          <div className="space-y-12">
-            {/* Bachelor's Degree */}
-            <motion.div
-              className="relative flex items-center md:justify-center"
-              variants={fadeInUp}
+          <div className="flex gap-4 mt-8 pt-6 border-t border-gray-800">
+            <a
+              href="https://drive.google.com/file/d/1RmAhngXdSS6Dr6hpAc6cWwfOcFAQ85lI/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 font-medium"
             >
-              {/* Timeline Node */}
-              <div className="absolute left-8 md:left-1/2 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform md:-translate-x-1/2 z-10">
-                <div className="absolute inset-0 bg-blue-500 dark:bg-blue-400 rounded-full animate-ping opacity-20"></div>
-              </div>
-
-              {/* Content Card */}
-              <div className="ml-20 md:ml-0 md:w-5/12 md:mr-auto">
-                <motion.div
-                  className="bg-gray-900/30 backdrop-blur-xl p-6 rounded-xl shadow-lg border border-gray-700/50 hover:border-purple-500/30 group transition-all duration-300"
-                  whileHover={{ scale: 1.02, y: -5 }}
-                >
-                  {/* College Logo */}
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-12 rounded-lg overflow-hidden mr-4 shadow-md border-2 border-white/20 bg-white/10 flex items-center justify-center">
-                      <Image
-                        src="/logos/CBIT.png"
-                        alt="CBIT Logo"
-                        width={64}
-                        height={48}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white">
-                        Chaitanya Bharathi Institute Of Technology
-                      </h3>
-                      <p className="text-violet-700 font-medium">
-                        Bachelor of Engineering - BE, Computer Science
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      <strong>Duration:</strong> Jul 2023 - Jul 2027
-                    </p>
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                      <strong>Status:</strong> Currently Pursuing
-                    </p>
-                    <p className="text-violet-600 mt-3 italic">
-                      &quot;Focusing on full-stack development, software engineering, and preparing for high-growth career roles.&quot;
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* Intermediate */}
-            <motion.div
-              className="relative flex items-center md:justify-center"
-              variants={fadeInUp}
+              View Certificate →
+            </a>
+            <a
+              href="/certs/Aetherpro_LOR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-400 hover:text-purple-300 font-medium"
             >
-              {/* Timeline Node */}
-              <div className="absolute left-8 md:left-1/2 w-6 h-6 bg-purple-500 dark:bg-purple-400 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform md:-translate-x-1/2 z-10">
-                <div className="absolute inset-0 bg-purple-500 dark:bg-purple-400 rounded-full animate-ping opacity-20"></div>
-              </div>
+              Letter of Recommendation →
+            </a>
+          </div>
+        </div>
+      </section>
 
-              {/* Content Card - Right side on desktop */}
-              <div className="ml-20 md:ml-0 md:w-5/12 md:ml-auto">
-                <motion.div
-                  className="bg-gray-900/30 backdrop-blur-xl p-6 rounded-xl shadow-lg border border-gray-700/50 hover:border-purple-500/30 group transition-all duration-300"
-                  whileHover={{ scale: 1.02, y: -5 }}
-                >
-                  {/* College Logo */}
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-12 rounded-lg overflow-hidden mr-4 shadow-md border-2 border-white/20 bg-white/10 flex items-center justify-center">
-                      <Image
-                        src="/logos/tswreis.png"
-                        alt="TSWREIS Gowlidoddi Logo"
-                        width={64}
-                        height={48}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white">
-                        TSWREIS COE Gowlidoddi
-                      </h3>
-                      <p className="text-violet-700 font-medium">
-                        Intermediate, MPC
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      <strong>Duration:</strong> Jul 2021 - Jul 2023
-                    </p>
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                      <strong>Grade:</strong> 97.4%
-                    </p>
-                    <p className="text-violet-600 mt-3 italic">
-                      &quot;Mathematics, Physics &amp; Chemistry with outstanding academic performance.&quot;
-                    </p>
-                  </div>
-                </motion.div>
+      {/* Education */}
+      <section>
+        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
+          Education
+        </h2>
+        <div className="space-y-6 max-w-4xl mx-auto">
+          {/* Degree */}
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
+            <div className="bg-white p-2 rounded-lg flex-shrink-0">
+              <Image src="/logos/CBIT.png" alt="CBIT Logo" width={64} height={48} className="object-contain" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white">Chaitanya Bharathi Institute Of Technology</h3>
+              <p className="text-gray-400 font-medium mb-3">Bachelor of Engineering - BE, Computer Science</p>
+              <div className="text-sm text-gray-500 space-y-1">
+                <p>Jul 2023 - Jul 2027 • Currently Pursuing</p>
+                <p className="italic">"Focusing on full-stack development, software engineering, and preparing for high-growth career roles."</p>
               </div>
-            </motion.div>
-
-            {/* School */}
-            <motion.div
-              className="relative flex items-center md:justify-center"
-              variants={fadeInUp}
-            >
-              {/* Timeline Node */}
-              <div className="absolute left-8 md:left-1/2 w-6 h-6 bg-pink-500 dark:bg-pink-400 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform md:-translate-x-1/2 z-10">
-                <div className="absolute inset-0 bg-pink-500 dark:bg-pink-400 rounded-full animate-ping opacity-20"></div>
-              </div>
-
-              {/* Content Card */}
-              <div className="ml-20 md:ml-0 md:w-5/12 md:mr-auto">
-                <motion.div
-                  className="bg-gray-900/30 backdrop-blur-xl p-6 rounded-xl shadow-lg border border-gray-700/50 hover:border-purple-500/30 group transition-all duration-300"
-                  whileHover={{ scale: 1.02, y: -5 }}
-                >
-                  {/* College Logo */}
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-12 rounded-lg overflow-hidden mr-4 shadow-md border-2 border-white/20 bg-white/10 flex items-center justify-center">
-                      <Image
-                        src="/logos/tswreis.png"
-                        alt="TSWREIS Chilkur Logo"
-                        width={64}
-                        height={48}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white">
-                        TSWREIS COE Chilkur
-                      </h3>
-                      <p className="text-violet-700 font-medium">
-                        Secondary Education
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      <strong>Duration:</strong> Jul 2015 - Jul 2021
-                    </p>
-                    <p className="text-violet-600 flex items-center">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                      <strong>Grade:</strong> 10 CGPA
-                    </p>
-                    <p className="text-violet-600 mt-3 italic">
-                      &quot;Foundation years with excellent academic performance and holistic development.&quot;
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+            </div>
           </div>
 
-          {/* Timeline End Indicator */}
-          <motion.div
-            className="relative flex justify-center mt-12"
-            variants={fadeInUp}
-          >
-            <div className="absolute left-8 md:left-1/2 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform md:-translate-x-1/2 flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
+          {/* Intermediate */}
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
+            <div className="bg-white p-2 rounded-lg flex-shrink-0">
+              <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={64} height={48} className="object-contain" />
             </div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+            <div>
+              <h3 className="text-xl font-bold text-white">TSWREIS COE Gowlidoddi</h3>
+              <p className="text-gray-400 font-medium mb-3">Intermediate, MPC</p>
+              <div className="text-sm text-gray-500 space-y-1">
+                <p>Jul 2021 - Jul 2023 • Grade: 97.4%</p>
+                <p className="italic">"Mathematics, Physics & Chemistry with outstanding academic performance."</p>
+              </div>
+            </div>
+          </div>
+
+          {/* High School */}
+          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
+            <div className="bg-white p-2 rounded-lg flex-shrink-0">
+              <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={64} height={48} className="object-contain" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white">TSWREIS COE Chilkur</h3>
+              <p className="text-gray-400 font-medium mb-3">Secondary Education</p>
+              <div className="text-sm text-gray-500 space-y-1">
+                <p>Jul 2015 - Jul 2021 • Grade: 10 CGPA</p>
+                <p className="italic">"Foundation years with excellent academic performance and holistic development."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

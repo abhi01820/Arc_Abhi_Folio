@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { FaCheck, FaTimes, FaClock, FaUser, FaEnvelope, FaBuilding, FaClipboard } from 'react-icons/fa';
 
 interface DownloadRequest {
@@ -66,9 +66,7 @@ export default function AdminDashboard() {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
           className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-md w-full mx-4"
         >
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
@@ -90,7 +88,7 @@ export default function AdminDashboard() {
               Access Dashboard
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
@@ -98,9 +96,7 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
           className="mb-8"
         >
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -109,7 +105,7 @@ export default function AdminDashboard() {
           <p className="text-gray-600 dark:text-gray-400">
             Manage and review resume download requests
           </p>
-        </motion.div>
+        </div>
 
         {loading ? (
           <div className="text-center py-12">
@@ -119,21 +115,16 @@ export default function AdminDashboard() {
         ) : (
           <div className="grid gap-6">
             {requests.length === 0 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <div
                 className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg"
               >
                 <FaClipboard className="text-4xl text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-600 dark:text-gray-400">No download requests yet</p>
-              </motion.div>
+              </div>
             ) : (
               requests.map((request, index) => (
-                <motion.div
+                <div
                   key={request.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 ${
                     request.status === 'pending' ? 'border-yellow-500' :
                     request.status === 'approved' ? 'border-green-500' :
@@ -206,7 +197,7 @@ export default function AdminDashboard() {
                       </div>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))
             )}
           </div>
