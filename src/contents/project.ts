@@ -105,7 +105,7 @@ export const projects: Project[] = [
     ],
     githubLink: "https://github.com/abhi01820/vehicle-insurance-mlops",
     demoLink: "",
-    image: "/projects/project4.png"
+    image: "/projects/vehicle_insurance.png"
   },
   {
     title: "🏥 MediGuide AI",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     ],
     githubLink: "https://github.com/abhi01820/MediGuide_AI",
     demoLink: "",
-    image: "/projects/project3.png"
+    image: "/projects/mediguide.png"
   },
   {
     title: "🎓 Education Analytics MLOps",
@@ -130,18 +130,19 @@ export const projects: Project[] = [
     ],
     githubLink: "https://github.com/abhi01820/Education-Analytics-mlops",
     demoLink: "",
-    image: "/projects/project2.png"
+    image: "/projects/education_analytics_mlops.png"
   },
   {
-    title: "📩 Spam Detection Pipeline",
-    description: "An automated spam detection pipeline leveraging AWS S3 and Data Version Control.",
+    title: "🤍 SoulSync: AI Relationship Companion",
+    description: "An AI-powered voice companion designed to simulate a supportive and emotionally intelligent relationship.",
     technologies: [
-      "Python",
-      "AWS S3",
-      "DVC"
+      "AI Voice",
+      "Next.js",
+      "Vapi AI",
+      "Tailwind CSS"
     ],
-    githubLink: "https://github.com/abhi01820/Spam-Detection-Pipeline-using-DVC-AWS-S3",
+    githubLink: "https://github.com/abhi01820/AI-Voice-Relationship-Companion",
     demoLink: "",
-    image: "/projects/project1.png"
+    image: "/projects/ai_voice_relationship_companion.png"
   }
 ];

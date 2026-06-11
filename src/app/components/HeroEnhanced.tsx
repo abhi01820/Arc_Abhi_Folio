@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -342,7 +343,9 @@ const Hero = () => {
             {[
               { icon: FaGithub, href: "https://github.com/abhi01820" },
               { icon: FaLinkedin, href: "https://www.linkedin.com/in/abhilash-mekala-b2a903355/" },
-              { icon: FaTwitter, href: "https://x.com/abhilash_01820" }
+              { icon: FaTwitter, href: "https://x.com/abhilash_01820" },
+              { icon: SiLeetcode, href: "https://leetcode.com/u/abhi_01820/" },
+              { icon: SiGeeksforgeeks, href: "https://www.geeksforgeeks.org/profile/johnab04hg?tab=activity" }
             ].map((social, index) => (
               <motion.div 
                 key={index} 

@@ -173,13 +173,13 @@ export default function LeetCodeStats() {
           {[...Array(45)].map((_, colIndex) => (
             <div key={colIndex} className="flex flex-col gap-1">
               {[...Array(7)].map((_, rowIndex) => {
-                // Randomly generate activity pattern matching the user's intense activity
+                // Randomly generate activity pattern matching the user's intense activity (362/365 days active)
                 const intensity = Math.random();
-                let bgColor = "bg-gray-900";
-                if (intensity > 0.8) bgColor = "bg-[#00ff41]";
-                else if (intensity > 0.6) bgColor = "bg-[#00cc33]";
+                let bgColor = "bg-[#00ff41]"; // Default to most intense
+                if (intensity > 0.99) bgColor = "bg-gray-900"; // Missed day (extremely rare)
+                else if (intensity > 0.7) bgColor = "bg-[#00cc33]";
                 else if (intensity > 0.4) bgColor = "bg-[#009922]";
-                else if (intensity > 0.2) bgColor = "bg-[#006611]";
+                else if (intensity > 0.1) bgColor = "bg-[#006611]";
 
                 return (
                   <motion.div 

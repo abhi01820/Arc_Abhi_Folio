@@ -1,5 +1,4 @@
 import About from "./about/page";
-import Blogs from "./components/Blogs";
 import HeroEnhanced from "./components/HeroEnhanced";
 import LeetCodeStats from "./components/LeetCodeStats";
 import Newsletter from "./components/Newsletter";
@@ -14,7 +13,6 @@ export default function Home() {
       <Projects />
       <About/>
       <LeetCodeStats />
-      <Blogs />
       <Newsletter />
       <Contact/>
     </>
