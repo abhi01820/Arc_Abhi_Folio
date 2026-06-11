@@ -68,7 +68,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-[#00f2fe] font-mono">> Ping_Me</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#00f2fe] font-mono">&gt; Ping_Me</h2>
             <p className="text-gray-300 font-mono text-sm border-l-2 border-[#00f2fe] pl-4 bg-[#00f2fe]/5 py-2">
               System is online and ready to accept new packets. I am open to discussing new systems, creative algorithms, or
               opportunities to be part of your network.
@@ -81,7 +81,7 @@ export default function Contact() {
                 <FaEnvelope className="h-6 w-6 text-[#00f2fe]" />
               </div>
               <div>
-                <h3 className="font-bold text-[#00ff41] font-mono">> Email_</h3>
+                <h3 className="font-bold text-[#00ff41] font-mono">&gt; Email_</h3>
                 <a href="mailto:mekalaabhilash01820@gmail.com" className="text-gray-300 hover:text-white transition-colors font-mono text-sm">
                   mekalaabhilash01820@gmail.com
                 </a>
@@ -93,7 +93,7 @@ export default function Contact() {
                 <FaPhone className="h-6 w-6 text-[#00ff41]" />
               </div>
               <div>
-                <h3 className="font-bold text-[#00ff41] font-mono">> Commlink_</h3>
+                <h3 className="font-bold text-[#00ff41] font-mono">&gt; Commlink_</h3>
                 <a href="tel:+917989430063" className="text-gray-300 hover:text-white transition-colors font-mono text-sm">
                   +91 7989430063
                 </a>
@@ -105,7 +105,7 @@ export default function Contact() {
                 <FaMapMarkerAlt className="h-6 w-6 text-pink-500" />
               </div>
               <div>
-                <h3 className="font-bold text-[#00ff41] font-mono">> Coordinates_</h3>
+                <h3 className="font-bold text-[#00ff41] font-mono">&gt; Coordinates_</h3>
                 <p className="text-gray-300 font-mono text-sm">Kukatpally, Medchal</p>
               </div>
             </motion.div>
@@ -122,7 +122,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6 font-mono">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2 text-[#00f2fe]">
-                > Input.Name_
+                &gt; Input.Name_
               </label>
               <input
                 type="text"
@@ -137,7 +137,7 @@ export default function Contact() {
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2 text-[#00f2fe]">
-                > Input.Email_
+                &gt; Input.Email_
               </label>
               <input
                 type="email"
@@ -152,7 +152,7 @@ export default function Contact() {
             
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2 text-[#00f2fe]">
-                > Input.Payload_
+                &gt; Input.Payload_
               </label>
               <textarea
                 id="message"

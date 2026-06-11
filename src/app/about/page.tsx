@@ -16,7 +16,7 @@ export default function About() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200 } }
+    show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 200 } }
   };
 
   return (
@@ -28,7 +28,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="text-[#00ff41]">></span> About_Me
+        <span className="text-[#00ff41]">&gt;</span> About_Me
       </motion.h1>
 
       {/* Bio */}
@@ -179,7 +179,7 @@ export default function About() {
           </div>
 
           <div className="mb-6">
-            <h4 className="text-lg font-bold font-mono mb-4 text-[#00f2fe]">> Achievements_</h4>
+            <h4 className="text-lg font-bold font-mono mb-4 text-[#00f2fe]">&gt; Achievements_</h4>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-400 list-none font-mono text-sm">
               <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Built full-stack platform with Next.js</li>
               <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Developed robust Node.js REST APIs</li>
@@ -189,7 +189,7 @@ export default function About() {
           </div>
 
           <div className="mb-6">
-            <h4 className="text-lg font-bold font-mono mb-3 text-[#00f2fe]">> Tech_Stack_</h4>
+            <h4 className="text-lg font-bold font-mono mb-3 text-[#00f2fe]">&gt; Tech_Stack_</h4>
             <div className="flex flex-wrap gap-2">
               {["Next.js", "React.js", "Node.js", "Express", "GitHub", "Vercel", "Postman"].map((tech, idx) => (
                 <span key={idx} className="px-3 py-1 rounded-sm border border-[#00ff41]/30 text-xs font-mono bg-[#00ff41]/10 text-[#00ff41]">

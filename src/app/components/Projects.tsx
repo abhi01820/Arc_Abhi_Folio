@@ -51,7 +51,7 @@ const Projects = () => {
               System.Projects
             </h2>
             <p className="text-lg md:text-xl text-[#00ff41] font-mono">
-              > Executing search protocol for latest builds...
+              &gt; Executing search protocol for latest builds...
             </p>
             <div className="w-24 h-1 bg-[#00f2fe] mx-auto lg:mx-0 rounded-full shadow-[0_0_10px_#00f2fe]" />
             <div className="hacker-border px-6 py-4 inline-block">
@@ -183,7 +183,7 @@ const Projects = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-[#00ff41] mb-4 font-mono">> Stack_Dependencies</h3>
+                  <h3 className="text-xl font-bold text-[#00ff41] mb-4 font-mono">&gt; Stack_Dependencies</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech: string) => (
                       <span

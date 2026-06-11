@@ -13,7 +13,7 @@ export default function Newsletter() {
        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-2xl font-bold mb-4 font-mono text-white text-glow-cyan">> Subscribe_To_Network</h2>
+              <h2 className="text-2xl font-bold mb-4 font-mono text-white text-glow-cyan">&gt; Subscribe_To_Network</h2>
               <p className="text-[#00ff41] font-mono text-sm">
                 Get the latest protocol updates on my projects, system logs, and tech insights delivered directly to your port.
               </p>

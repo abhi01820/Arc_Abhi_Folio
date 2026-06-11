@@ -14,7 +14,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200 } }
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 200 } }
 };
 
 export default function LeetCodeStats() {
@@ -34,7 +34,7 @@ export default function LeetCodeStats() {
           <FaCode className="text-[#00ff41] text-4xl" /> LeetCode_Metrics
         </h2>
         <p className="text-[#00f2fe] mt-4 font-mono">
-          > Global Rank: 147,353 | Top 17.15% | Rating: 1,657
+          &gt; Global Rank: 147,353 | Top 17.15% | Rating: 1,657
         </p>
       </motion.div>
 

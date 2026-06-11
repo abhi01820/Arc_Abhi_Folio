@@ -31,7 +31,7 @@ const Blogs = () => {
                     >
                         <Link href={`/`}>
                             <h3 className="text-xl font-bold mb-3 text-white hover:text-[#00f2fe] transition-colors font-mono">
-                                > {blog.title}_
+                                &gt; {blog.title}_
                             </h3>
                         </Link>
                         <p className="text-gray-400 mb-6 flex-grow font-mono text-sm border-l border-[#00f2fe]/30 pl-3">

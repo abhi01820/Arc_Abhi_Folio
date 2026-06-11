@@ -177,13 +177,13 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
                 <FaTerminal className="text-[#00ff41]" /> System.Access
               </h3>
               <p className="text-gray-400 font-mono text-sm">
-                > Enter credentials to request secure resume download...
+                &gt; Enter credentials to request secure resume download...
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4 font-mono">
               <div>
-                <label className="block text-sm text-[#00f2fe] mb-1">> Name_</label>
+                <label className="block text-sm text-[#00f2fe] mb-1">&gt; Name_</label>
                 <input
                   type="text"
                   name="name"
@@ -195,7 +195,7 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
               </div>
 
               <div>
-                <label className="block text-sm text-[#00f2fe] mb-1">> Email_</label>
+                <label className="block text-sm text-[#00f2fe] mb-1">&gt; Email_</label>
                 <input
                   type="email"
                   name="email"
@@ -207,7 +207,7 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
               </div>
 
               <div>
-                <label className="block text-sm text-[#00f2fe] mb-1">> Organization_</label>
+                <label className="block text-sm text-[#00f2fe] mb-1">&gt; Organization_</label>
                 <input
                   type="text"
                   name="company"
@@ -218,7 +218,7 @@ const DownloadModal = ({ isOpen, onClose, onSubmit }: {
               </div>
 
               <div>
-                <label className="block text-sm text-[#00f2fe] mb-1">> Intent_</label>
+                <label className="block text-sm text-[#00f2fe] mb-1">&gt; Intent_</label>
                 <select
                   name="purpose"
                   required
