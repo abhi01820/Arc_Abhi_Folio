@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaTerminal } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 interface FormData {
   name: string;
@@ -49,59 +50,79 @@ export default function Contact() {
   }
 
   return (
-    <div className="container max-w-7xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold mb-8 text-center text-white">
-        Contact Me
-      </h1>
+    <div className="container max-w-7xl mx-auto py-16 px-4 relative z-10">
+      <motion.h1 
+        className="text-4xl font-bold mb-12 text-center text-white font-mono uppercase tracking-widest text-glow-cyan flex items-center justify-center gap-3"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <FaTerminal className="text-[#00ff41]" /> Establish_Connection
+      </motion.h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         {/* Contact Information */}
-        <div className="space-y-8">
+        <motion.div 
+          className="space-y-8"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
-            <p className="text-gray-300">
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your visions.
+            <h2 className="text-2xl font-bold mb-4 text-[#00f2fe] font-mono">> Ping_Me</h2>
+            <p className="text-gray-300 font-mono text-sm border-l-2 border-[#00f2fe] pl-4 bg-[#00f2fe]/5 py-2">
+              System is online and ready to accept new packets. I am open to discussing new systems, creative algorithms, or
+              opportunities to be part of your network.
             </p>
           </div>
           
           <div className="space-y-6">
-            <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
-              <FaEnvelope className="h-6 w-6 text-blue-500" />
+            <motion.div whileHover={{ x: 10 }} className="flex items-center gap-4 cyber-chip p-4">
+              <div className="p-3 bg-black border border-[#00f2fe] rounded">
+                <FaEnvelope className="h-6 w-6 text-[#00f2fe]" />
+              </div>
               <div>
-                <h3 className="font-semibold text-white">Email</h3>
-                <a href="mailto:mekalaabhilash01820@gmail.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <h3 className="font-bold text-[#00ff41] font-mono">> Email_</h3>
+                <a href="mailto:mekalaabhilash01820@gmail.com" className="text-gray-300 hover:text-white transition-colors font-mono text-sm">
                   mekalaabhilash01820@gmail.com
                 </a>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
-              <FaPhone className="h-6 w-6 text-green-500" />
+            <motion.div whileHover={{ x: 10 }} className="flex items-center gap-4 cyber-chip p-4">
+              <div className="p-3 bg-black border border-[#00ff41] rounded">
+                <FaPhone className="h-6 w-6 text-[#00ff41]" />
+              </div>
               <div>
-                <h3 className="font-semibold text-white">Phone</h3>
-                <a href="tel:+917989430063" className="text-gray-300 hover:text-green-400 transition-colors">
+                <h3 className="font-bold text-[#00ff41] font-mono">> Commlink_</h3>
+                <a href="tel:+917989430063" className="text-gray-300 hover:text-white transition-colors font-mono text-sm">
                   +91 7989430063
                 </a>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
-              <FaMapMarkerAlt className="h-6 w-6 text-red-500" />
-              <div>
-                <h3 className="font-semibold text-white">Location</h3>
-                <p className="text-gray-300">Kukatpally, Medchal</p>
+            <motion.div whileHover={{ x: 10 }} className="flex items-center gap-4 cyber-chip p-4">
+              <div className="p-3 bg-black border border-pink-500 rounded">
+                <FaMapMarkerAlt className="h-6 w-6 text-pink-500" />
               </div>
-            </div>
+              <div>
+                <h3 className="font-bold text-[#00ff41] font-mono">> Coordinates_</h3>
+                <p className="text-gray-300 font-mono text-sm">Kukatpally, Medchal</p>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         
         {/* Contact Form */}
-        <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <motion.div 
+          className="cyber-chip p-8"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <form onSubmit={handleSubmit} className="space-y-6 font-mono">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
-                Name
+              <label htmlFor="name" className="block text-sm font-medium mb-2 text-[#00f2fe]">
+                > Input.Name_
               </label>
               <input
                 type="text"
@@ -110,13 +131,13 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 bg-black/50 border border-[#00f2fe]/30 rounded-none focus:outline-none focus:border-[#00ff41] text-white transition-all"
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
-                Email
+              <label htmlFor="email" className="block text-sm font-medium mb-2 text-[#00f2fe]">
+                > Input.Email_
               </label>
               <input
                 type="email"
@@ -125,13 +146,13 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 bg-black/50 border border-[#00f2fe]/30 rounded-none focus:outline-none focus:border-[#00ff41] text-white transition-all"
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">
-                Message
+              <label htmlFor="message" className="block text-sm font-medium mb-2 text-[#00f2fe]">
+                > Input.Payload_
               </label>
               <textarea
                 id="message"
@@ -140,31 +161,37 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none"
+                className="w-full px-4 py-3 bg-black/50 border border-[#00f2fe]/30 rounded-none focus:outline-none focus:border-[#00ff41] text-white transition-all resize-none"
               />
             </div>
             
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors disabled:opacity-70"
+              className="w-full py-3 bg-[#00ff41]/20 hover:bg-[#00ff41]/40 border border-[#00ff41] text-[#00ff41] font-bold transition-all disabled:opacity-50 flex items-center justify-center uppercase tracking-widest"
             >
-              {status === 'loading' ? 'Sending...' : 'Send Message'}
+              {status === 'loading' ? 'Transmitting...' : 'Send_Packet'}
             </button>
             
             {status === 'success' && (
-              <p className="text-green-400 text-center bg-green-400/10 py-2 rounded-lg mt-4">
-                Message sent successfully!
-              </p>
+              <motion.p 
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                className="text-[#00ff41] text-center border border-[#00ff41] bg-[#00ff41]/10 py-2 mt-4 text-sm font-bold"
+              >
+                [ SUCCESS ] Payload delivered securely.
+              </motion.p>
             )}
             
             {status === 'error' && (
-              <p className="text-red-400 text-center bg-red-400/10 py-2 rounded-lg mt-4">
-                Failed to send message. Please try again.
-              </p>
+              <motion.p 
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                className="text-red-400 text-center border border-red-400 bg-red-400/10 py-2 mt-4 text-sm font-bold"
+              >
+                [ ERROR ] Transmission failed. Retry.
+              </motion.p>
             )}
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

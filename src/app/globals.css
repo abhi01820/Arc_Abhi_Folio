@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #007AFF;
-  --color-secondary: #6B7280;
-  --color-dark: #1F2937;
-  --color-light: #F9FAFB;
-  --color-text: #000000;
-  --color-bg: #ffffff;
+  --color-primary: #00f2fe; /* Cyber Cyan */
+  --color-secondary: #00ff41; /* Matrix Green */
+  --color-dark: #050505;
+  --color-light: #e0e0e0;
+  --color-text: #ffffff;
+  --color-bg: #000000;
 
   --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
 
   --animation-fade-in: fadeIn 0.5s ease-in-out;
   --animation-slide-up: slideUp 0.5s ease-in-out;
+  --animation-glitch: glitch 1s linear infinite;
 }
 
 
@@ -39,9 +41,32 @@ a {
   }
   
   .section-title {
-    @apply text-3xl font-bold mb-8 text-center;
+    @apply text-3xl font-bold mb-8 text-center font-mono text-white tracking-widest uppercase;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
   }
-} 
+
+  .hacker-border {
+    @apply border border-[#00ff41]/30 bg-[#00ff41]/5 rounded-lg backdrop-blur-md transition-all duration-300 hover:border-[#00ff41] hover:shadow-[0_0_15px_rgba(0,255,65,0.4)];
+  }
+
+  .cyber-chip {
+    @apply relative border border-[#00f2fe]/30 bg-[#050505]/80 rounded-xl overflow-hidden backdrop-blur-xl transition-all duration-300 hover:border-[#00f2fe] hover:shadow-[0_0_20px_rgba(0,242,254,0.4)] hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 242, 254, 0.4);
+  }
+  .text-glow-green {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+  }
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(0, 242, 254, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 242, 254, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -63,3 +88,8 @@ a {
   }
 }
 
+@keyframes glitch {
+  2%, 64% { transform: translate(2px,0) skew(0deg); }
+  4%, 60% { transform: translate(-2px,0) skew(0deg); }
+  62% { transform: translate(0,0) skew(5deg); }
+}

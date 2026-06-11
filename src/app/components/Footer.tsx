@@ -17,7 +17,7 @@ export default function Footer() {
           
           <div className="flex space-x-6">
             <a
-              href="https://github.com/abhi01820?tab=repositories"
+              href="https://github.com/abhi01820"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary hover:text-primary transition-colors"
@@ -25,7 +25,7 @@ export default function Footer() {
               <FaGithub className="h-6 w-6" />
             </a>
             <a
-              href="https://twitter.com/abhilash_01820"
+              href="https://x.com/abhilash_01820"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary hover:text-primary transition-colors"

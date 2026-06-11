@@ -74,24 +74,74 @@ export const projects: Project[] = [
     demoLink: "https://online-bookstore-vblc.onrender.com/",
     image: "/projects/project1.png",
   },
-{
-  title: "SPREADSHEET MANAGEMENT UI",
-  description:
-    "A responsive, Google Sheets–inspired spreadsheet UI built with React, TypeScript, and Tailwind CSS. Features include editable tables, search/filtering, toolbar actions, and modular sidebar navigation. Demonstrates skills in scalable UI architecture, stateful interactions, and advanced table rendering with @tanstack/react-table.",
-  technologies: [
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "@tanstack/react-table",
-    "React Icons",
-    "Modular Component Architecture",
-    "Responsive Design",
-    "State Management"
-  ],
-  githubLink: "https://github.com/abhi01820/Spreadsheet-Management-UI",
-  demoLink: "https://spreadsheet-management-ui.vercel.app/",
-  image: "/projects/project6.png"
-}
-
-  
+  {
+    title: "SPREADSHEET MANAGEMENT UI",
+    description:
+      "A responsive, Google Sheets–inspired spreadsheet UI built with React, TypeScript, and Tailwind CSS. Features include editable tables, search/filtering, toolbar actions, and modular sidebar navigation. Demonstrates skills in scalable UI architecture, stateful interactions, and advanced table rendering with @tanstack/react-table.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "@tanstack/react-table",
+      "React Icons",
+      "Modular Component Architecture",
+      "Responsive Design",
+      "State Management"
+    ],
+    githubLink: "https://github.com/abhi01820/Spreadsheet-Management-UI",
+    demoLink: "https://spreadsheet-management-ui.vercel.app/",
+    image: "/projects/project6.png"
+  },
+  {
+    title: "🚗 Vehicle Insurance MLOps",
+    description: "An end-to-end Machine Learning pipeline for vehicle insurance, incorporating CI/CD and MLOps practices.",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Docker",
+      "DVC",
+      "MLflow",
+      "GitHub Actions"
+    ],
+    githubLink: "https://github.com/abhi01820/vehicle-insurance-mlops",
+    demoLink: "",
+    image: "/projects/project4.png"
+  },
+  {
+    title: "🏥 MediGuide AI",
+    description: "An intelligent medical assistant system utilizing Optical Character Recognition and Natural Language Processing.",
+    technologies: [
+      "JavaScript",
+      "OCR",
+      "NLP"
+    ],
+    githubLink: "https://github.com/abhi01820/MediGuide_AI",
+    demoLink: "",
+    image: "/projects/project3.png"
+  },
+  {
+    title: "🎓 Education Analytics MLOps",
+    description: "Machine learning operations pipeline designed to analyze educational data and generate actionable insights.",
+    technologies: [
+      "Python",
+      "Docker",
+      "DVC",
+      "MLflow"
+    ],
+    githubLink: "https://github.com/abhi01820/Education-Analytics-mlops",
+    demoLink: "",
+    image: "/projects/project2.png"
+  },
+  {
+    title: "📩 Spam Detection Pipeline",
+    description: "An automated spam detection pipeline leveraging AWS S3 and Data Version Control.",
+    technologies: [
+      "Python",
+      "AWS S3",
+      "DVC"
+    ],
+    githubLink: "https://github.com/abhi01820/Spam-Detection-Pipeline-using-DVC-AWS-S3",
+    demoLink: "",
+    image: "/projects/project1.png"
+  }
 ];

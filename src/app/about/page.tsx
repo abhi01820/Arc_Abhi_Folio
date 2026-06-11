@@ -1,106 +1,155 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200 } }
+  };
+
   return (
-    <div className="container max-w-5xl mx-auto py-16 px-4">
+    <div className="container max-w-5xl mx-auto py-16 px-4 relative z-10">
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-8 text-center text-white">
-        About Me
-      </h1>
+      <motion.h1 
+        className="text-4xl font-bold mb-8 text-center text-white font-mono uppercase tracking-widest text-glow-cyan"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <span className="text-[#00ff41]">></span> About_Me
+      </motion.h1>
 
       {/* Bio */}
-      <section className="mb-16">
-        <p className="text-lg text-gray-300 max-w-3xl mx-auto text-center leading-relaxed">
-          I'm a passionate Full Stack Developer with experience in building
-          real-time, modern web applications. I specialize in both frontend and
-          backend development to deliver seamless, efficient, and user-focused
-          digital products.
-        </p>
-      </section>
+      <motion.section 
+        className="mb-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+      >
+        <div className="cyber-chip p-8 max-w-3xl mx-auto text-center border-l-4 border-l-[#00f2fe]">
+          <p className="text-lg text-gray-300 leading-relaxed font-mono">
+            Computer Science Engineering student at CBIT Hyderabad with experience in building
+            AI-powered applications, real-time systems, and scalable full-stack solutions.
+            Passionate about solving real-world problems through technology and continuously exploring
+            Artificial Intelligence, Machine Learning, MLOps, and modern software architectures.
+          </p>
+        </div>
+      </motion.section>
 
       {/* Skills Section */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
-          Technical Skills
+      <motion.section 
+        className="mb-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
+          Technical_Arsenal
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-white mb-4">Frontend</h3>
-            <ul className="text-gray-400 space-y-2">
-              <li>React.js & Next.js</li>
-              <li>TypeScript & JavaScript</li>
-              <li>Tailwind CSS</li>
-              <li>HTML5 & CSS3</li>
+          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
+            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">Frontend & Backend_</h3>
+            <ul className="text-gray-400 space-y-2 font-mono text-sm">
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> React, Next.js, Tailwind</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Node.js, Express, FastAPI</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> C++, Python, Java, JS</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> MongoDB, MySQL</li>
             </ul>
-          </div>
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-white mb-4">Backend</h3>
-            <ul className="text-gray-400 space-y-2">
-              <li>Node.js & Express</li>
-              <li>RESTful APIs</li>
-              <li>MongoDB & SQL</li>
-              <li>Authentication (JWT)</li>
+          </motion.div>
+          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
+            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">AI & MLOps_</h3>
+            <ul className="text-gray-400 space-y-2 font-mono text-sm">
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Machine Learning, RAG</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Gemini API, Vapi AI</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Docker, MLflow, DVC</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> CI/CD, GitHub Actions</li>
             </ul>
-          </div>
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-white mb-4">Tools & Others</h3>
-            <ul className="text-gray-400 space-y-2">
-              <li>Git & GitHub</li>
-              <li>Postman</li>
-              <li>Vercel Deployment</li>
-              <li>C++ & System Design</li>
+          </motion.div>
+          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
+            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">Core & Tools_</h3>
+            <ul className="text-gray-400 space-y-2 font-mono text-sm">
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Data Structures & Algo</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> OOP, DBMS, REST APIs</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Git, GitHub, VS Code</li>
+              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Postman, System Design</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Journey */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
-          What I've Been Doing
+      <motion.section 
+        className="mb-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
+          Active_Processes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              title: "Real-time Full Stack Projects",
-              desc: "Built full-fledged applications like:\n• AI Voice Medical Assistant\n• AI Voice Interview Preparation\n• E-Commerce Bookstore\n• Real-time Chat App with Video Call",
+              title: "AI & ML Systems",
+              desc: "Building AI-Powered Applications, Intelligent Assistants, and exploring RAG Systems and Generative AI.",
             },
             {
-              title: "Self-Learning & Growth",
-              desc: "Actively learning system design, DevOps, and scalable architecture. Continuously growing through projects and open-source.",
+              title: "Cloud & MLOps",
+              desc: "Learning Cloud Technologies, MLOps, Scalable Deployments, and Production-Ready architectures.",
             },
             {
-              title: "UI/UX Practice",
-              desc: "Focusing on clean, accessible interfaces and responsive designs.",
+              title: "System Design",
+              desc: "Strengthening System Design and Software Architecture Concepts to build robust backend services.",
             },
             {
-              title: "Career Building",
-              desc: "Mastering DSA in C++, building real-world projects, and improving communication.",
+              title: "Algorithmic Growth",
+              desc: "Continuously Solving Data Structures & Algorithms Problems for optimal computational logic.",
             },
           ].map((item, idx) => (
-            <div
+            <motion.div
+              variants={itemVariants}
               key={idx}
-              className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
+              className="hacker-border p-6"
             >
-              <h3 className="text-xl font-semibold mb-2 text-white">
+              <h3 className="text-xl font-bold font-mono mb-2 text-[#00f2fe]">
                 {item.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed whitespace-pre-line">
+              <p className="text-gray-400 leading-relaxed whitespace-pre-line font-mono text-sm">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Professional Experience */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
-          Professional Experience
+      <motion.section 
+        className="mb-20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
+          Professional_Log
         </h2>
-        <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl max-w-4xl mx-auto">
+        <div className="cyber-chip p-8 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
-            <div className="flex-shrink-0 bg-white p-2 rounded-lg">
+            <div className="flex-shrink-0 bg-white p-2 rounded-lg border-2 border-[#00f2fe]">
               <Image
                 src="/logos/aetherpro_healthcare_private_limited_logo.jpeg"
                 alt="AetherPro Healthcare Logo"
@@ -110,17 +159,19 @@ export default function About() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-2xl font-bold text-white mb-2 font-mono">
                 Full Stack Developer Intern
               </h3>
-              <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
-                <span className="bg-gray-800 px-3 py-1 rounded-full text-blue-400">
-                  AetherPro Healthcare Pvt. Ltd.
+              <div className="flex flex-wrap items-center gap-4 text-sm font-mono font-medium">
+                <span className="text-[#00f2fe]">
+                  @ AetherPro Healthcare Pvt. Ltd.
                 </span>
-                <span className="bg-gray-800 px-3 py-1 rounded-full text-purple-400">
+                <span className="text-gray-500">|</span>
+                <span className="text-[#00ff41]">
                   Remote
                 </span>
-                <span className="bg-gray-800 px-3 py-1 rounded-full text-green-400">
+                <span className="text-gray-500">|</span>
+                <span className="text-pink-400">
                   Jul 2025 – Aug 2025
                 </span>
               </div>
@@ -128,99 +179,110 @@ export default function About() {
           </div>
 
           <div className="mb-6">
-            <h4 className="text-lg font-semibold mb-4 text-white">Key Achievements</h4>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-400 list-disc list-inside">
-              <li>Built full-stack web platform with Next.js & React.js</li>
-              <li>Developed robust APIs with Node.js & Express</li>
-              <li>Implemented secure user authentication systems</li>
-              <li>Built ICD/CPT code management modules</li>
+            <h4 className="text-lg font-bold font-mono mb-4 text-[#00f2fe]">> Achievements_</h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-400 list-none font-mono text-sm">
+              <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Built full-stack platform with Next.js</li>
+              <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Developed robust Node.js REST APIs</li>
+              <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Implemented JWT secure auth</li>
+              <li className="flex gap-2"><span className="text-[#00ff41]">[*]</span> Built ICD/CPT management modules</li>
             </ul>
           </div>
 
           <div className="mb-6">
-            <h4 className="text-lg font-semibold mb-3 text-white">Technologies Used</h4>
+            <h4 className="text-lg font-bold font-mono mb-3 text-[#00f2fe]">> Tech_Stack_</h4>
             <div className="flex flex-wrap gap-2">
               {["Next.js", "React.js", "Node.js", "Express", "GitHub", "Vercel", "Postman"].map((tech, idx) => (
-                <span key={idx} className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300">
+                <span key={idx} className="px-3 py-1 rounded-sm border border-[#00ff41]/30 text-xs font-mono bg-[#00ff41]/10 text-[#00ff41]">
                   {tech}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="flex gap-4 mt-8 pt-6 border-t border-gray-800">
+          <div className="flex gap-4 mt-8 pt-6 border-t border-gray-800 font-mono text-sm uppercase tracking-wider">
             <a
               href="https://drive.google.com/file/d/1RmAhngXdSS6Dr6hpAc6cWwfOcFAQ85lI/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 font-medium"
+              className="text-[#00f2fe] hover:text-white transition-colors flex items-center gap-2"
             >
-              View Certificate →
+              [View_Certificate]
             </a>
             <a
               href="/certs/Aetherpro_LOR.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-400 hover:text-purple-300 font-medium"
+              className="text-pink-400 hover:text-white transition-colors flex items-center gap-2"
             >
-              Letter of Recommendation →
+              [View_LOR]
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Education */}
-      <section>
-        <h2 className="text-2xl font-bold mb-8 text-center text-white border-b border-gray-800 pb-4">
-          Education
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
+          Education_Log
         </h2>
-        <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="space-y-6 max-w-4xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#00f2fe] before:to-[#00ff41]">
           {/* Degree */}
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
-            <div className="bg-white p-2 rounded-lg flex-shrink-0">
-              <Image src="/logos/CBIT.png" alt="CBIT Logo" width={64} height={48} className="object-contain" />
+          <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-black bg-[#00f2fe] text-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              🎓
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Chaitanya Bharathi Institute Of Technology</h3>
-              <p className="text-gray-400 font-medium mb-3">Bachelor of Engineering - BE, Computer Science</p>
-              <div className="text-sm text-gray-500 space-y-1">
-                <p>Jul 2023 - Jul 2027 • Currently Pursuing</p>
-                <p className="italic">"Focusing on full-stack development, software engineering, and preparing for high-growth career roles."</p>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] cyber-chip p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-white p-1 rounded">
+                  <Image src="/logos/CBIT.png" alt="CBIT Logo" width={40} height={40} className="object-contain" />
+                </div>
+                <h3 className="font-bold text-white font-mono text-lg">CBIT</h3>
               </div>
+              <p className="text-[#00ff41] font-mono text-sm mb-1">B.E. Computer Science</p>
+              <p className="text-gray-500 font-mono text-xs">Jul 2023 - Jul 2027</p>
             </div>
           </div>
 
           {/* Intermediate */}
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
-            <div className="bg-white p-2 rounded-lg flex-shrink-0">
-              <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={64} height={48} className="object-contain" />
+          <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-black bg-[#00ff41] text-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              📚
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">TSWREIS COE Gowlidoddi</h3>
-              <p className="text-gray-400 font-medium mb-3">Intermediate, MPC</p>
-              <div className="text-sm text-gray-500 space-y-1">
-                <p>Jul 2021 - Jul 2023 • Grade: 97.4%</p>
-                <p className="italic">"Mathematics, Physics & Chemistry with outstanding academic performance."</p>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] cyber-chip p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-white p-1 rounded">
+                  <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={40} height={40} className="object-contain" />
+                </div>
+                <h3 className="font-bold text-white font-mono text-lg">TSWREIS COE Gowlidoddi</h3>
               </div>
+              <p className="text-[#00ff41] font-mono text-sm mb-1">Intermediate, MPC</p>
+              <p className="text-gray-500 font-mono text-xs">Jul 2021 - Jul 2023 • 97.4%</p>
             </div>
           </div>
 
           {/* High School */}
-          <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start">
-            <div className="bg-white p-2 rounded-lg flex-shrink-0">
-              <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={64} height={48} className="object-contain" />
+          <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-black bg-pink-500 text-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              🏫
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">TSWREIS COE Chilkur</h3>
-              <p className="text-gray-400 font-medium mb-3">Secondary Education</p>
-              <div className="text-sm text-gray-500 space-y-1">
-                <p>Jul 2015 - Jul 2021 • Grade: 10 CGPA</p>
-                <p className="italic">"Foundation years with excellent academic performance and holistic development."</p>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] cyber-chip p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-white p-1 rounded">
+                  <Image src="/logos/tswreis.png" alt="TSWREIS Logo" width={40} height={40} className="object-contain" />
+                </div>
+                <h3 className="font-bold text-white font-mono text-lg">TSWREIS COE Chilkur</h3>
               </div>
+              <p className="text-[#00ff41] font-mono text-sm mb-1">Secondary Education</p>
+              <p className="text-gray-500 font-mono text-xs">Jul 2015 - Jul 2021 • 10 CGPA</p>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
