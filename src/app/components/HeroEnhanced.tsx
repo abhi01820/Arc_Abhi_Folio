@@ -316,13 +316,13 @@ const Hero = () => {
             Hi, I'm <span className="text-glow-cyan text-[#00f2fe]">Abhilash</span>
           </h1>
 
-          <div className="text-xl md:text-2xl text-[#00ff41] mb-6 font-mono h-[30px] font-bold">
+          <div className="text-xl md:text-2xl text-[#00ff41] mb-6 font-mono min-h-[30px] md:h-[30px] h-auto font-bold flex flex-wrap">
             <Typewriter
               words={[
                 "> Full Stack Developer_",
                 "> AI Engineer_",
-                "> MLOps Enthusiast_",
-                "> Code Artisan_"
+                "> Generative AI_",
+                "> Agentic AI_"
               ]}
               loop={true}
               cursor
@@ -333,10 +333,7 @@ const Hero = () => {
             />
           </div>
 
-          <p className="text-gray-300 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0 font-mono text-sm border-l-2 border-[#00ff41] pl-4 bg-[#00ff41]/5 p-3">
-            I specialize in building clean, robust, and scalable cyber architectures. 
-            Passionate about deep system engineering, algorithmic efficiency, and modern web tech.
-          </p>
+
 
           {/* Social Links */}
           <div className="flex justify-center md:justify-start space-x-4 mb-8">
@@ -363,13 +360,6 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 font-mono text-sm tracking-wider uppercase">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-              <Link href="/projects" className="hacker-border text-[#00ff41] px-8 py-4 w-full text-center flex items-center justify-center gap-3">
-                <FaProjectDiagram className="text-lg" />
-                Initialize_Projects
-              </Link>
-            </motion.div>
-
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <button
                 onClick={() => setShowDownloadModal(true)}

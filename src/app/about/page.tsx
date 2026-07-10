@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TechStack from "../components/TechStack";
 
 export default function About() {
   const containerVariants = {
@@ -40,55 +41,15 @@ export default function About() {
       >
         <div className="cyber-chip p-8 max-w-3xl mx-auto text-center border-l-4 border-l-[#00f2fe]">
           <p className="text-lg text-gray-300 leading-relaxed font-mono">
-            Computer Science Engineering student at CBIT Hyderabad with experience in building
-            AI-powered applications, real-time systems, and scalable full-stack solutions.
-            Passionate about solving real-world problems through technology and continuously exploring
-            Artificial Intelligence, Machine Learning, MLOps, and modern software architectures.
+            Computer Science Engineering student at <b className="text-white">CBIT Hyderabad</b> with experience in building
+            <b className="text-white"> AI-powered applications</b>, <b className="text-white">real-time systems</b>, and <b className="text-white">scalable full-stack solutions</b>.
+            Passionate about building production-ready AI systems using Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI Agents, and scalable Full Stack architectures. I enjoy solving real-world problems through Generative AI and modern software engineering.
           </p>
         </div>
       </motion.section>
 
-      {/* Skills Section */}
-      <motion.section 
-        className="mb-20"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
-          Technical_Arsenal
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
-            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">Frontend & Backend_</h3>
-            <ul className="text-gray-400 space-y-2 font-mono text-sm">
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> React, Next.js, Tailwind</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Node.js, Express, FastAPI</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> C++, Python, Java, JS</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> MongoDB, MySQL</li>
-            </ul>
-          </motion.div>
-          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
-            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">AI & MLOps_</h3>
-            <ul className="text-gray-400 space-y-2 font-mono text-sm">
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Machine Learning, RAG</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Gemini API, Vapi AI</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Docker, MLflow, DVC</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> CI/CD, GitHub Actions</li>
-            </ul>
-          </motion.div>
-          <motion.div variants={itemVariants} className="cyber-chip p-6 group">
-            <h3 className="text-lg font-mono font-bold text-[#00ff41] mb-4 group-hover:text-glow-green">Core & Tools_</h3>
-            <ul className="text-gray-400 space-y-2 font-mono text-sm">
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Data Structures & Algo</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> OOP, DBMS, REST APIs</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Git, GitHub, VS Code</li>
-              <li className="flex items-center gap-2"><span className="text-[#00f2fe]">-</span> Postman, System Design</li>
-            </ul>
-          </motion.div>
-        </div>
-      </motion.section>
+      <TechStack />
+
 
       {/* Journey */}
       <motion.section 
@@ -217,6 +178,60 @@ export default function About() {
               [View_LOR]
             </a>
           </div>
+        </div>
+      </motion.section>
+
+      {/* Certifications Log */}
+      <motion.section
+        className="mb-20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#00f2fe] font-mono border-b border-[#00f2fe]/30 pb-4 inline-block mx-auto">
+          Certifications_Log
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            {
+              title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
+              icon: "🤖",
+              link: "https://drive.google.com/file/d/1asYxo9cKT63H1sgJwMfFCvTvMhz9wjjF/view"
+            },
+            {
+              title: "Oracle Cloud Infrastructure AI Foundations Associate (2025)",
+              icon: "☁️",
+              link: "https://drive.google.com/file/d/1Z02GNvqDZsDZ0dz8Em7b8ff0h5VzYtrl/view"
+            },
+            {
+              title: "Data Science Foundation Certification – Infosys Springboard",
+              icon: "📊",
+              link: "https://drive.google.com/file/d/1Z4ODwv4FyXxBSATI61aqrALx8budJyzE/view"
+            },
+            {
+              title: "Data Structures & Algorithms (C++) – GeeksforGeeks",
+              icon: "💻",
+              link: "https://drive.google.com/file/d/1d0LesuOYsFCV80cVZvy79uSTemD9j-N8/view"
+            }
+          ].map((cert, idx) => (
+            <div key={idx} className="cyber-chip p-6 flex flex-col justify-between group hover:border-[#00ff41]/50 transition-colors">
+              <div>
+                <div className="text-3xl mb-4">{cert.icon}</div>
+                <h3 className="text-lg font-bold font-mono text-white mb-4 line-clamp-3">
+                  {cert.title}
+                </h3>
+              </div>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#00f2fe] hover:text-[#00ff41] font-mono text-sm uppercase tracking-wider transition-colors"
+              >
+                [View_Certificate] <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          ))}
         </div>
       </motion.section>
 
