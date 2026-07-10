@@ -33,8 +33,8 @@ export default function LeetCodeStats() {
         <h2 className="text-3xl md:text-4xl font-bold text-white font-mono uppercase tracking-widest text-glow-cyan flex items-center justify-center gap-4">
           <FaCode className="text-[#00ff41] text-4xl" /> LeetCode_Metrics
         </h2>
-        <p className="text-[#00f2fe] mt-4 font-mono">
-          &gt; Global Rank: 153,415 | Top 17.82% | Rating: 1,653
+        <p className="text-[#00f2fe] mt-4 font-mono text-sm md:text-base">
+          &gt; Global Rank: 101,468 | Top 17.82% | Rating: 1,653
         </p>
       </motion.div>
 

@@ -47,7 +47,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-mono uppercase tracking-widest text-glow-cyan">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-mono uppercase tracking-widest text-glow-cyan">
               System.Projects
             </h2>
             <p className="text-lg md:text-xl text-[#00ff41] font-mono">

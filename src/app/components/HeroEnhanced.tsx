@@ -312,7 +312,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white font-mono uppercase tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-white font-mono uppercase tracking-tight">
             Hi, I'm <span className="text-glow-cyan text-[#00f2fe]">Abhilash</span>
           </h1>
 
