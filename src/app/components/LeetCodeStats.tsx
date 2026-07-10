@@ -98,20 +98,6 @@ export default function LeetCodeStats() {
             </h3>
             
             <div className="space-y-6">
-              <div className="bg-black/40 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors">
-                <div className="text-sm text-gray-400 font-mono mb-1">Max Streak</div>
-                <div className="text-3xl font-bold text-orange-500 flex items-end gap-2">
-                  182 <span className="text-sm font-normal text-gray-500 mb-1">Days</span>
-                </div>
-              </div>
-              
-              <div className="bg-black/40 p-5 rounded-lg border border-gray-800 hover:border-[#00f2fe]/50 transition-colors">
-                <div className="text-sm text-gray-400 font-mono mb-1">Total Active Days</div>
-                <div className="text-3xl font-bold text-[#00f2fe] flex items-end gap-2">
-                  361 <span className="text-sm font-normal text-gray-500 mb-1">Days</span>
-                </div>
-              </div>
-
               <div className="bg-black/40 p-5 rounded-lg border border-gray-800 hover:border-[#00ff41]/50 transition-colors">
                 <div className="text-sm text-gray-400 font-mono mb-1">Submissions (Past Year)</div>
                 <div className="text-3xl font-bold text-[#00ff41]">1,647</div>
