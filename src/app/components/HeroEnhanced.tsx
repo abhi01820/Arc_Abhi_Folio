@@ -316,7 +316,7 @@ const Hero = () => {
             Hi, I'm <span className="text-glow-cyan text-[#00f2fe]">Abhilash</span>
           </h1>
 
-          <div className="text-xl md:text-2xl text-[#00ff41] mb-6 font-mono min-h-[30px] md:h-[30px] h-auto font-bold flex flex-wrap">
+          <div className="text-lg md:text-2xl text-[#00ff41] mb-6 font-mono min-h-[30px] md:h-[30px] h-auto font-bold flex flex-wrap">
             <Typewriter
               words={[
                 "> Full Stack Developer_",

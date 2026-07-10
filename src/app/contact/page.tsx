@@ -52,11 +52,11 @@ export default function Contact() {
   return (
     <div className="container max-w-7xl mx-auto py-16 px-4 relative z-10">
       <motion.h1 
-        className="text-4xl font-bold mb-12 text-center text-white font-mono uppercase tracking-widest text-glow-cyan flex items-center justify-center gap-3"
+        className="text-xl sm:text-2xl md:text-4xl font-bold mb-12 text-center text-white font-mono uppercase tracking-widest text-glow-cyan flex flex-wrap items-center justify-center gap-2 sm:gap-3 break-all sm:break-normal"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <FaTerminal className="text-[#00ff41]" /> Establish_Connection
+        <FaTerminal className="text-[#00ff41] shrink-0" /> <span className="break-all sm:break-normal">Establish_Connection</span>
       </motion.h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
