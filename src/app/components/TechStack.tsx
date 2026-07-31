@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { 
   FaBrain, FaRobot, FaLanguage, FaMagic, FaProjectDiagram, 
-  FaNetworkWired, FaDatabase, FaCode, FaObjectGroup, FaServer
+  FaNetworkWired, FaDatabase, FaCode, FaObjectGroup
 } from "react-icons/fa";
 
 const SkillIcon = ({ icon: Icon, name, color }: { icon: IconType, name: string, color: string }) => {
@@ -85,8 +85,7 @@ export default function TechStack() {
       title: "🧠 AI Frameworks",
       skills: [
         { name: "LangChain", icon: FaProjectDiagram, color: "#1C3C3C" },
-        { name: "LangGraph", icon: FaNetworkWired, color: "#0F766E" },
-        { name: "CrewAI", icon: FaRobot, color: "#FF5722" }
+        { name: "LangGraph", icon: FaNetworkWired, color: "#0F766E" }
       ]
     },
     {
@@ -111,8 +110,7 @@ export default function TechStack() {
       skills: [
         { name: "Git", icon: SiGit, color: "#F05032" },
         { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-        { name: "DSA", icon: FaCode, color: "#00599C" },
-        { name: "Sys Design", icon: FaServer, color: "#795548" }
+        { name: "DSA", icon: FaCode, color: "#00599C" }
       ]
     }
   ];

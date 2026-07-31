@@ -18,8 +18,8 @@ const itemVariants = {
 };
 
 export default function LeetCodeStats() {
-  const totalSolved = 674;
-  const totalProblems = 3985;
+  const totalSolved = 701;
+  const totalProblems = 4005;
   const percentage = (totalSolved / totalProblems) * 100;
 
   return (
@@ -34,7 +34,7 @@ export default function LeetCodeStats() {
           <FaCode className="text-[#00ff41] text-4xl" /> LeetCode_Metrics
         </h2>
         <p className="text-[#00f2fe] mt-4 font-mono text-sm md:text-base">
-          &gt; Global Rank: 101,468 | Top 17.82% | Rating: 1,653
+          &gt; Global Rank: 154,872 | Top 17.94% | Rating: 1,653
         </p>
       </motion.div>
 
@@ -77,11 +77,11 @@ export default function LeetCodeStats() {
           <div className="w-full space-y-4 z-10 font-mono text-sm">
             <div className="flex justify-between items-center bg-black/40 p-3 rounded border-l-2 border-[#00ff41]">
               <span className="text-gray-300">Easy</span>
-              <span className="text-[#00ff41] font-bold">222</span>
+              <span className="text-[#00ff41] font-bold">232</span>
             </div>
             <div className="flex justify-between items-center bg-black/40 p-3 rounded border-l-2 border-yellow-400">
               <span className="text-gray-300">Medium</span>
-              <span className="text-yellow-400 font-bold">390</span>
+              <span className="text-yellow-400 font-bold">407</span>
             </div>
             <div className="flex justify-between items-center bg-black/40 p-3 rounded border-l-2 border-red-500">
               <span className="text-gray-300">Hard</span>
@@ -100,7 +100,7 @@ export default function LeetCodeStats() {
             <div className="space-y-6">
               <div className="bg-black/40 p-5 rounded-lg border border-gray-800 hover:border-[#00ff41]/50 transition-colors">
                 <div className="text-sm text-gray-400 font-mono mb-1">Submissions (Past Year)</div>
-                <div className="text-3xl font-bold text-[#00ff41]">1,647</div>
+                <div className="text-3xl font-bold text-[#00ff41]">1,720</div>
               </div>
             </div>
           </div>
@@ -117,10 +117,10 @@ export default function LeetCodeStats() {
               <FaMedal className="text-yellow-400" /> Honors & Badges
             </h3>
             <div className="relative z-10">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">11</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">13</div>
               <p className="text-gray-400 font-mono text-sm">Most Recent:</p>
               <p className="text-white font-mono font-bold mt-1 inline-block border-b border-yellow-400/50 pb-1">
-                365 Days Badge
+                500 Days Badge
               </p>
             </div>
           </div>
@@ -136,17 +136,17 @@ export default function LeetCodeStats() {
                 <span className="text-[#00f2fe] font-bold text-lg">C++</span>
               </div>
               <div>
-                <div className="text-xl font-bold text-white">647</div>
+                <div className="text-xl font-bold text-white">663</div>
                 <div className="text-xs text-gray-400 font-mono">Problems Solved</div>
               </div>
             </div>
 
             <div className="flex items-center gap-6">
               <div className="w-12 h-12 rounded-full bg-[#4479A1]/20 flex items-center justify-center border border-[#4479A1]">
-                <span className="text-[#4479A1] font-bold text-lg">SQL</span>
+                <span className="text-[#4479A1] font-bold text-sm">MySQL</span>
               </div>
               <div>
-                <div className="text-xl font-bold text-white">26</div>
+                <div className="text-xl font-bold text-white">37</div>
                 <div className="text-xs text-gray-400 font-mono">Problems Solved</div>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function LeetCodeStats() {
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-[#00ff41] font-mono text-sm uppercase tracking-wider font-bold">Activity_Matrix_Simulation</h3>
-          <span className="text-xs text-gray-500 font-mono">1,647 Submissions</span>
+          <span className="text-xs text-gray-500 font-mono">1,720 Submissions</span>
         </div>
         <div className="flex gap-1 overflow-hidden opacity-80">
           {[...Array(45)].map((_, colIndex) => (
