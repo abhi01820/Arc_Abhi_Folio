@@ -7,7 +7,7 @@ import {
   SiReact, SiNextdotjs, SiHtml5, SiCss3, SiTailwindcss,
   SiNodedotjs, SiExpress, SiFastapi,
   SiMongodb, SiMysql, SiDocker, SiGithubactions, SiGit, SiPostman,
-  SiVercel
+  SiVercel, SiJupyter, SiVisualstudiocode
 } from "react-icons/si";
 import { 
   FaBrain, FaRobot, FaLanguage, FaMagic, FaProjectDiagram, 
@@ -110,7 +110,9 @@ export default function TechStack() {
       skills: [
         { name: "Git", icon: SiGit, color: "#F05032" },
         { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-        { name: "DSA", icon: FaCode, color: "#00599C" }
+        { name: "DSA", icon: FaCode, color: "#00599C" },
+        { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+        { name: "Jupyter", icon: SiJupyter, color: "#F37626" }
       ]
     }
   ];

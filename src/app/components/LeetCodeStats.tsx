@@ -34,7 +34,7 @@ export default function LeetCodeStats() {
           <FaCode className="text-[#00ff41] text-4xl" /> LeetCode_Metrics
         </h2>
         <p className="text-[#00f2fe] mt-4 font-mono text-sm md:text-base">
-          &gt; Global Rank: 154,872 | Top 17.94% | Rating: 1,653
+          &gt; Global Rank: 95,221 | Top 17.94% | Rating: 1,653
         </p>
       </motion.div>
 
