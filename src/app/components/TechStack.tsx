@@ -7,8 +7,9 @@ import {
   SiReact, SiNextdotjs, SiHtml5, SiCss3, SiTailwindcss,
   SiNodedotjs, SiExpress, SiFastapi,
   SiMongodb, SiMysql, SiDocker, SiGithubactions, SiGit, SiPostman,
-  SiVercel, SiJupyter, SiVisualstudiocode
+  SiVercel, SiJupyter
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import { 
   FaBrain, FaRobot, FaLanguage, FaMagic, FaProjectDiagram, 
   FaNetworkWired, FaDatabase, FaCode, FaObjectGroup
@@ -111,7 +112,7 @@ export default function TechStack() {
         { name: "Git", icon: SiGit, color: "#F05032" },
         { name: "Postman", icon: SiPostman, color: "#FF6C37" },
         { name: "DSA", icon: FaCode, color: "#00599C" },
-        { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+        { name: "VS Code", icon: VscVscode, color: "#007ACC" },
         { name: "Jupyter", icon: SiJupyter, color: "#F37626" }
       ]
     }
