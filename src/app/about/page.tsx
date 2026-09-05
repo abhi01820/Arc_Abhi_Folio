@@ -40,6 +40,9 @@ export default function About() {
         transition={{ delay: 0.2, duration: 0.8 }}
       >
         <div className="cyber-chip p-8 max-w-3xl mx-auto text-center border-l-4 border-l-[#00f2fe]">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 text-[#00f2fe] font-mono tracking-wider italic">
+            "ARC — Adversity • Resilience • Character"
+          </h2>
           <p className="text-lg text-gray-300 leading-relaxed font-mono">
             Computer Science Engineering student at <b className="text-white">CBIT Hyderabad</b> with experience in building
             <b className="text-white"> AI-powered applications</b>, <b className="text-white">real-time systems</b>, and <b className="text-white">scalable full-stack solutions</b>.
